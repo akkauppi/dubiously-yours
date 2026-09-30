@@ -1,0 +1,3 @@
+[extra-build-dependencies]
+# MMPose's legacy chumpy dependency imports pip from its build script.
+chumpy = ["pip"]

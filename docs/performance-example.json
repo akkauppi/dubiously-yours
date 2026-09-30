@@ -1,0 +1,74 @@
+{
+  "measurement_date": "2026-09-30",
+  "hardware": {
+    "cpu": "AMD Ryzen 7 7700X 8-Core Processor",
+    "logical_cpus": 16,
+    "visible_ram_GiB": 31.21,
+    "gpu": "NVIDIA GeForce RTX 3080 Ti",
+    "vram_GiB": 12,
+    "platform": "Linux x86_64 under WSL2",
+    "speech_threads": 4
+  },
+  "download_payloads": [
+    {
+      "component": "Chatterbox Multilingual V2",
+      "bytes": 3208854455,
+      "decimal_GB": 3.209,
+      "binary_GiB": 2.988,
+      "basis": "sum of pinned model manifest files; includes small config/tokenizer files"
+    },
+    {
+      "component": "Whisper-small alignment",
+      "bytes": 486214370,
+      "decimal_GB": 0.486,
+      "binary_GiB": 0.453,
+      "basis": "sum of pinned model manifest files; includes small config/tokenizer files"
+    },
+    {
+      "component": "MuseTalk 1.5 plus all required supporting models",
+      "bytes": 4482904130,
+      "decimal_GB": 4.483,
+      "binary_GiB": 4.175,
+      "file_count": 11,
+      "basis": "all required checked files, including VAE, Whisper-tiny, DWPose, face parsing, ResNet and S3FD"
+    },
+    {
+      "component": "Offline tokenizer archive",
+      "bytes": 34567143,
+      "decimal_GB": 0.035,
+      "binary_GiB": 0.032,
+      "basis": "compressed auxiliary tokenizer archive, expanded size differs"
+    }
+  ],
+  "total_payload_bytes": 8212540098,
+  "size_limits": [
+    "Model payload bytes exclude Python, PyTorch/CUDA, environments, Git source, HTTP overhead and package caches.",
+    "Values describe pinned artifacts measured on this date, not all future versions.",
+    "Installed disk use and network transfer bytes differ."
+  ],
+  "example_timings": {
+    "generated_audio_seconds": 7.84,
+    "speech_seconds": 6.84,
+    "inserted_pause_seconds": 1.0,
+    "tts_model_load_seconds": 8.291473862947896,
+    "tts_reference_conditioning_seconds": 1.069186134962365,
+    "tts_model_generate_seconds": 34.9624484598171,
+    "musetalk_subprocess_seconds": 51.47680119611323,
+    "video_input_frames": 198,
+    "final_video_frames": 196,
+    "fps": 25,
+    "resolution": [
+      1280,
+      720
+    ],
+    "earlier_example_video_seconds": 36.6,
+    "earlier_example_musetalk_subprocess_seconds": 195.18005061801523
+  },
+  "timing_limits": [
+    "Single observed runs, not a statistical benchmark.",
+    "TTS component times exclude unmeasured imports, hashing and assembly; do not sum them as full CLI wall time.",
+    "MuseTalk time includes its subprocess startup, model loading, face/frame processing and encoding, but excludes wrapper preflight.",
+    "No peak RAM/VRAM, energy, installation download speed or cost was measured.",
+    "Other workloads, driver/cache state, script length and source framing can change runtime."
+  ]
+}

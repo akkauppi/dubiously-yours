@@ -1,0 +1,25 @@
+name: Source and media checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Install media utilities
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core
+      - name: Test without downloading models or using a GPU
+        run: python -m unittest discover -s tests -v
+      - name: Audit the public source boundary
+        run: python scripts/public_release.py check
+      - name: Build and check clean source bundle
+        run: |
+          python scripts/public_release.py build --output dist/dubiously-yours
+          cd dist/dubiously-yours
+          python -m unittest discover -s tests -v

@@ -1,0 +1,22 @@
+# Linux x86_64 / Python 3.10.20. Bootstrap uses requirements-video.lock.txt.
+# Torch 2.0.1+cu118, torchvision 0.15.2+cu118 and torchaudio 2.0.2+cu118
+# are pinned in that lock; use scripts/setup_video.py for the correct indexes.
+numpy==1.23.5
+diffusers==0.30.2
+accelerate==0.28.0
+opencv-python==4.9.0.80
+soundfile==0.12.1
+transformers==4.39.2
+huggingface_hub==0.30.2
+librosa==0.11.0
+einops==0.8.1
+omegaconf==2.3.1
+ffmpeg-python==0.2.0
+imageio[ffmpeg]==2.37.4
+requests==2.34.2
+gdown==6.4.0
+mmengine==0.10.7
+mmcv @ https://download.openmmlab.com/mmcv/dist/cu118/torch2.0.0/mmcv-2.0.1-cp310-cp310-manylinux1_x86_64.whl
+mmdet==3.1.0
+mmpose==1.1.0
+setuptools==80.9.0
