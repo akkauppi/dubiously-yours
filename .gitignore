@@ -9,10 +9,18 @@
 /examples/*
 !/scripts/
 /scripts/*
+!/skills/
+/skills/*
 !/tests/
 /tests/*
 !/.github/workflows/
 /.github/workflows/*
+!/skills/dubiously-yours/
+/skills/dubiously-yours/*
+!/skills/dubiously-yours/agents/
+/skills/dubiously-yours/agents/*
+!/skills/dubiously-yours/references/
+/skills/dubiously-yours/references/*
 !/.gitignore
 !/.github/workflows/ci.yml
 !/LICENSE
@@ -26,6 +34,7 @@
 !/requirements-video.lock.txt
 !/uv-video.toml
 !/docs/SETUP.md
+!/docs/AGENT_GUIDE.md
 !/docs/WORKFLOW.md
 !/docs/TROUBLESHOOTING.md
 !/docs/PUBLISHING.md
@@ -41,6 +50,7 @@
 !/scripts/fetch_finnish_models.py
 !/scripts/setup_audio.py
 !/scripts/setup_media.py
+!/scripts/check_resources.py
 !/scripts/download_clip.py
 !/scripts/render_portrait.py
 !/scripts/prepare_interview_video.py
@@ -52,3 +62,7 @@
 !/tests/test_public_release.py
 !/tests/test_media_smoke.py
 !/tests/test_download.py
+!/tests/test_resources.py
+!/skills/dubiously-yours/SKILL.md
+!/skills/dubiously-yours/agents/openai.yaml
+!/skills/dubiously-yours/references/model-evaluation.md

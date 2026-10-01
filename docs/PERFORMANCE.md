@@ -73,6 +73,8 @@ The listed components total roughly **15 GiB** before those additions. As an ini
 
 ## Keep experiments inexpensive
 
+Use `python3 scripts/check_resources.py --mode video --duration 10 --json` to inspect the current machine and estimate the space for the intended clip. It credits existing pinned payloads by size and groups allocations by their actual filesystem so shared free space is not counted twice. Size matching is not a hash check. Its package/cache and decoded-frame allowances are planning estimates; they are separate from the observed measurements above. The [agent guide](AGENT_GUIDE.md) explains how the skill uses this report before setup and rendering.
+
 Start with one short passage, listen to it, and choose the reference before rendering a full greeting. Retain a useful take rather than regenerating it for every visual change. Use fixed comparison settings so a change of reference or seed is interpretable.
 
 Run models sequentially when GPU memory is shared with other applications. Use a short close-up first, then check the mouth, captions, ending and cut positions. A technically valid export can still need another performance take.

@@ -44,8 +44,18 @@ Measured the current model payloads at **8,212,540,098 bytes**, excluding Python
 
 Added optional source downloading through explicit yt-dlp commands and a separate media setup helper. Downloaded clips retain source metadata and frame rate; the documented workflow explains original versus local time intervals and optional 25 fps normalization. Network access is explicit in setup/fetch/download operations, while inference consumes local assets. The new downloader has not received a fresh live-network test in this packaging work.
 
-## Continuing the diary
-
 The final source checks passed 30 automated tests, including model-free Finnish/English media assembly, downloader validation, publication isolation, changed-input refusal and metadata/caption hash verification. The downloader environment passed an offline version/import check; a mocked download also exercised real FFmpeg validation. These checks do not substitute for a live extractor test or a fresh installation.
+
+## 2026-10-01 — Guided use through an AI skill
+
+Added a reusable agent skill for making greetings from ordinary-language direction and source-video links. The agent handles configuration, local setup and media bookkeeping; the user judges a short voice audition and the final performance. The skill preserves source/local time offsets, exact displayed names, the working model pins and existing successful takes.
+
+A read-only resource helper checks the current machine and estimates remaining model, environment/cache and temporary-media space. It distinguishes size-based asset presence from integrity, aggregates storage needs by filesystem and treats unavailable GPU diagnostics as uncertainty. The renderer's 4 GiB free-memory guard and the historically tested 12 GiB card remain distinct from a measured peak-memory requirement.
+
+Alternative-model research is conditional on an actual request or limitation. The skill uses current primary sources, records dates and checkpoint revisions, and proposes isolated short comparisons before changing the working stack. A model's claimed advantage does not establish local quality or compatibility.
+
+Validation passed 48 automated tests, including 18 resource-check cases, and the skill format validator. An independent agent exercised three supplied scenarios: a fresh setup with insufficient storage and a busy GPU, an accent complaint without current model-research access, and continuation after an approved audition with an incorrect source/local timestamp. The review clarified preservation of approved audio, relocation limits and approximate versus exact duration. Live read-only checks also distinguished sandbox-inaccessible GPU diagnostics from actual available GPU memory. No new model or media generation was needed for this change; a complete first-time nontechnical-user session remains untested.
+
+## Continuing the diary
 
 For a new result, record the input provenance, intended script, changed variable, environment/model revision, output checks and listening decision. Distinguish a running step from a finished artifact and a technical pass from a convincing performance. Keep private identities and recording details in ignored local run records.

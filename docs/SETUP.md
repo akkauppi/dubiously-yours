@@ -6,6 +6,8 @@ The generic Finnish CLI has completed reference preparation, CPU synthesis, alig
 
 ## System tools
 
+An agent can guide the setup using the bundled skill; see the [agent guide](AGENT_GUIDE.md). Before installation or a new render, run `python3 scripts/check_resources.py --mode video --duration 10 --json` with the intended greeting length. Use `--mode audio` for speech only. This read-only report checks the actual storage locations and current memory/device visibility, while separating estimates from measurements. It does not replace the environment and model integrity checks below.
+
 Provide Python **3.11 or later** as `python3` for the top-level CLI, plus Git, FFmpeg/`ffprobe` and `uv`. The CLI's Python is separate from the managed model environments. FFmpeg needs H.264, AAC, MP3 and libass subtitle support. For video, provide a working NVIDIA driver accessible inside Linux or WSL2.
 
 ```bash

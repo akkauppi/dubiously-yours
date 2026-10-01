@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dubiously Yours"
+  short_description: "Make local AI greetings from a script and video"
+  default_prompt: "Use $dubiously-yours to make a short greeting from my video, checking this computer before downloads and letting me hear a voice sample first."

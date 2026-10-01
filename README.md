@@ -21,6 +21,20 @@ The existing environments, models and tokenizer cache occupy roughly **15 GiB** 
 
 On the tested **Ryzen 7 7700X / RTX 3080 Ti 12 GiB / WSL2** machine, a 7.84-second Finnish sample used **34.962 seconds in CPU speech-generation calls** and **51.477 seconds in the MuseTalk GPU subprocess**. Audio used four CPU threads. Model loading and other overhead are separate; these figures are not a complete job time or a guarantee for another machine. See the [measured sizes, hardware and timing limits](docs/PERFORMANCE.md).
 
+## Use it with an AI agent
+
+Give an agent a video link, a passage to use and the greeting you want. The bundled [Dubiously Yours skill](skills/dubiously-yours/SKILL.md) guides it through resource checks, setup, source selection, a short voice audition and the final export. You can direct the result without editing configuration files yourself.
+
+See the [agent guide](docs/AGENT_GUIDE.md) for a ready-to-use prompt and skill installation options. The skill can research alternative models for a specific quality or hardware need while preserving the working setup.
+
+The resource helper can also run independently, without downloading or loading models:
+
+```bash
+python3 scripts/check_resources.py --mode video --duration 10 --json
+```
+
+It separates measured resources from estimated remaining downloads and working space. A passing report supports a short trial; it is not proof that a full neural render fits.
+
 ## Start here
 
 The supported setup target is Linux x86_64, including WSL2, with FFmpeg, Git, `uv` and an NVIDIA GPU for video. Read the [setup guide](docs/SETUP.md) before downloading the model environments.
@@ -73,6 +87,7 @@ Voice likeness, names, Finnish pronunciation, comic timing and lip-sync quality 
 ## Documentation
 
 - [Setup](docs/SETUP.md)
+- [Using an AI agent](docs/AGENT_GUIDE.md)
 - [Download sizes and measured performance](docs/PERFORMANCE.md)
 - [Workflow and job format](docs/WORKFLOW.md)
 - [Troubleshooting](docs/TROUBLESHOOTING.md)
